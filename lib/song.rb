@@ -20,15 +20,13 @@ class Song
 
   def self.new_by_name(name)
     song = self.new
-    @name = name
-    song.name = @name
+    song.name = name
     song
   end
   
   def self.create_by_name(name)
     song = self.new
-    @name = name
-    song.name = @name
+    song.name = name
     song.save
     song
   end
@@ -51,10 +49,8 @@ class Song
     info = no_ext.split(" - ")
     
     song = self.new
-    @artist_name = info[0]
-    @name = info[1]
-    song.artist_name = @artist_name
-    song.name = @name
+    song.artist_name = info[0]
+    song.name = info[1]
     song
   end
   
